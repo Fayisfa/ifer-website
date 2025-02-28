@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>IFER - Academy</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicons/favicon.ico"
+    />
+    <link rel="manifest" href="assets/img/favicons/manifest.json" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/img/favicons/mstile-150x150.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="vendors/hamburgers/hamburgers.min.css" rel="stylesheet" />
+    <link href="vendors/loaders.css/loaders.min.css" rel="stylesheet" />
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/user.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <style>
+      /* Custom CSS for the portfolio */
+      .portfolio-item {
+        display: none; /* Hide all items by default */
+      }
+      .portfolio-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .filter-button {
+        /* transition: background-color 0.1s ease-in-out, color 2s ease-in-out; */
+        cursor: pointer;
+      }
+      .filter-button:hover {
+        background-color: #3674b5;
+        border-radius: 10px;
+        color: white;
+      }
+
+      .filter-button.active {
+        background-color: #3674b5;
+        border-radius: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Navigation bar.-->
+
+    <div class="sticky-top navbar-elixir">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="index.html"
+            ><img src="assets/img/logo-no-bg.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler p-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#primaryNavbarCollapse"
+            aria-controls="primaryNavbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger hamburger--emphatic"
+              ><span class="hamburger-box"
+                ><span class="hamburger-inner"></span></span
+            ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="primaryNavbarCollapse">
+            <ul class="navbar-nav py-3 py-lg-0 mt-1 mb-2 my-lg-0 ms-lg-n1">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="./index.html"
+                  role="button"
+                  aria-expanded="false"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="pages/about.html"
+                  role="button"
+                  aria-expanded="false"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="pages/about.html"
+                  role="button"
+                  aria-expanded="false"
+                  >Admissions</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="pages/achievements.html"
+                  role="button"
+                  aria-expanded="false"
+                  >Achievements</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./gallery.html"
+                  role="button"
+                  aria-expanded="false"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+            <a
+              class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0"
+              href="contact.html"
+              >Contact</a
+            >
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main mt-5 pt-3" id="top">
+      <nav class="navbar navbar-expand-lg mt-5">
+        <div class="container">
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-1">
+              <li class="nav-item">
+                <a class="nav-link filter-button active" data-filter="all"
+                  >All</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link filter-button" data-filter="app">De-Camp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link filter-button" data-filter="product"
+                  >Dishun</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link filter-button" data-filter="branding"
+                  >Inforium</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Portfolio Gallery -->
+      <div class="container my-5">
+        <div class="row">
+          <!-- Portfolio Items -->
+          <div class="col-md-4 mb-4 portfolio-item app">
+            <img src="./assets/img/10.jpg" alt="App 1" class="img-fluid" />
+            <div class="text-center mt-2">App 1</div>
+          </div>
+          <div class="col-md-4 mb-4 portfolio-item product">
+            <img src="./assets/img/9.jpeg" alt="Product 1" class="img-fluid" />
+            <div class="text-center mt-2">Product 1</div>
+          </div>
+          <div class="col-md-4 mb-4 portfolio-item branding">
+            <img
+              src="./assets/img/header-1.JPG"
+              alt="Branding 1"
+              class="img-fluid"
+            />
+            <div class="text-center mt-2">Branding 1</div>
+          </div>
+          <div class="col-md-4 mb-4 portfolio-item app">
+            <img src="./assets/img/9.jpeg" alt="App 2" class="img-fluid" />
+            <div class="text-center mt-2">App 2</div>
+          </div>
+          <div class="col-md-4 mb-4 portfolio-item product">
+            <img
+              src="./assets/img/header-3.JPG"
+              alt="Product 2"
+              class="img-fluid"
+            />
+            <div class="text-center mt-2">Product 2</div>
+          </div>
+          <div class="col-md-4 mb-4 portfolio-item branding">
+            <img
+              src="./assets/img/header-6.jpg"
+              alt="Branding 2"
+              class="img-fluid"
+            />
+            <div class="text-center mt-2">Branding 2</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ============================================-->
+
+    <footer class="footer bg-primary text-center py-4">
+      <div class="container">
+        <div
+          class="row align-items-center justify-content-center opacity-85 text-white"
+        >
+          <div class="col-sm-6 mt-3 mt-sm-0">
+            <p class="lh-lg mb-0 fw-semi-bold">
+              &copy; All Rights Reserved 2025.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+
+    <script src="vendors/prism/prism.js"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
+    <script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+    <script src="vendors/gsap/gsap.js"></script>
+    <script src="vendors/gsap/customEase.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-button");
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+        // Show all items by default
+        showAllItems();
+
+        // Add click event listeners to filter buttons
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const filter = this.getAttribute("data-filter");
+
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            // Add active class to the clicked button
+            this.classList.add("active");
+
+            // Filter items
+            if (filter === "all") {
+              showAllItems();
+            } else {
+              filterItems(filter);
+            }
+          });
+        });
+
+        // Function to show all items
+        function showAllItems() {
+          portfolioItems.forEach((item) => {
+            item.style.display = "block";
+          });
+        }
+
+        // Function to filter items based on category
+        function filterItems(category) {
+          portfolioItems.forEach((item) => {
+            if (item.classList.contains(category)) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

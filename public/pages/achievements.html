@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>IFER - Academy</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/img/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/img/favicons/favicon.ico"
+    />
+    <link rel="manifest" href="../assets/img/favicons/manifest.json" />
+    <meta
+      name="msapplication-TileImage"
+      content="../assets/img/favicons/mstile-150x150.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="../vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="../vendors/prism/prism.css" rel="stylesheet" />
+    <link href="../vendors/hamburgers/hamburgers.min.css" rel="stylesheet" />
+    <link href="../vendors/loaders.css/loaders.min.css" rel="stylesheet" />
+    <link href="../assets/css/theme.css" rel="stylesheet" />
+    <link href="../assets/css/user.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #4e63d7;
+        --secondary-color: #f5f6fa;
+        --text-color: #333;
+        --light-text: #767676;
+        --shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+      }
+
+      .section-title {
+        margin-bottom: 60px;
+        text-align: center;
+      }
+
+      .section-title h2 {
+        position: relative;
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .section-title p {
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--light-text);
+        margin-bottom: 0;
+      }
+
+      .team {
+        padding: 80px 0;
+        position: relative;
+      }
+
+      .team-member {
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+
+      .team-member:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .member-img {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .member-img img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .team-member:hover .member-img img {
+        transform: scale(1.05);
+      }
+
+      .member-info {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .member-info h4 {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      .member-info span {
+        display: block;
+        font-size: 15px;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      .role-badge {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 30px;
+        background-color: rgba(78, 99, 215, 0.1);
+        color: var(--primary-color);
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 992px) {
+        .team-member {
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Navigation bar.-->
+
+    <div class="sticky-top navbar-elixir">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="index.html"
+            ><img src="../assets/img/logo-no-bg.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler p-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#primaryNavbarCollapse"
+            aria-controls="primaryNavbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger hamburger--emphatic"
+              ><span class="hamburger-box"
+                ><span class="hamburger-inner"></span></span
+            ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="primaryNavbarCollapse">
+            <ul class="navbar-nav py-3 py-lg-0 mt-1 mb-2 my-lg-0 ms-lg-n1">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="../index.html"
+                  role="button"
+                  aria-expanded="false"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./about.html"
+                  role="button"
+                  aria-expanded="false"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../pages/admissions.html"
+                  role="button"
+                  aria-expanded="false"
+                  >Admissions</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../pages/achievements.html"
+                  role="button"
+                  aria-expanded="false"
+                  >Achievements</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../gallery.html"
+                  role="button"
+                  aria-expanded="false"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+            <a
+              class="btn btn-outline-primary rounded-pill btn-sm border-2 d-block d-lg-inline-block ms-auto my-3 my-lg-0"
+              href="../contact.html"
+              >Contact</a
+            >
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <div class="preloader" id="preloader">
+        <div class="loader">
+          <div class="line-scale">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      <section id="team" class="team section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Our Achievements</h2>
+          <p>Take a glance at some of our success stories</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="../assets/img/portrait-1.jpg"
+                    class="img-fluid"
+                    alt="Walter White"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Azharudheen</h4>
+                  <span>Completed MBBS</span>
+                  <div class="role-badge">Medical</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="../assets//img/portrait-3.jpg"
+                    class="img-fluid"
+                    alt="Sarah Jhonson"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Arshad</h4>
+                  <span>Completed CA</span>
+                  <div class="role-badge">CA</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="../assets/img/portrait-5.jpg"
+                    class="img-fluid"
+                    alt="William Anderson"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Aslam Sajjad</h4>
+                  <span>B. Tech in ME</span>
+                  <div class="role-badge">Engineering</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="../assets/img/portrait-7.jpg"
+                    class="img-fluid"
+                    alt="Amanda Jepson"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Roshan K</h4>
+                  <span>Bsc Economics</span>
+                  <div class="role-badge">Finance</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="../assets/img/portrait-7.jpg"
+                    class="img-fluid"
+                    alt="Amanda Jepson"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Roshan K</h4>
+                  <span>Bsc Economics</span>
+                  <div class="role-badge">Finance</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="../assets/img/portrait-7.jpg"
+                    class="img-fluid"
+                    alt="Amanda Jepson"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Roshan K</h4>
+                  <span>Bsc Economics</span>
+                  <div class="role-badge">Finance</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="../assets/img/portrait-7.jpg"
+                    class="img-fluid"
+                    alt="Amanda Jepson"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Roshan K</h4>
+                  <span>Bsc Economics</span>
+                  <div class="role-badge">Finance</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="../assets/img/portrait-7.jpg"
+                    class="img-fluid"
+                    alt="Amanda Jepson"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Roshan K</h4>
+                  <span>Bsc Economics</span>
+                  <div class="role-badge">Finance</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="../assets/img/portrait-7.jpg"
+                    class="img-fluid"
+                    alt="Amanda Jepson"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Roshan K</h4>
+                  <span>Bsc Economics</span>
+                  <div class="role-badge">Finance</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+          </div>
+        </div>
+      </section>
+      <!-- /Team Section -->
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+     <footer class="footer bg-primary text-center py-4">
+      <div class="container">
+        <div
+          class="row align-items-center justify-content-center opacity-85 text-white"
+        >
+          <div class="col-sm-6 mt-3 mt-sm-0">
+            <p class="lh-lg mb-0 fw-semi-bold">
+              &copy; All Rights Reserved 2025.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../vendors/popper/popper.min.js"></script>
+    <script src="../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../vendors/is/is.min.js"></script>
+    <script src="../vendors/countup/countUp.umd.js"></script>
+    <script src="../vendors/prism/prism.js"></script>
+    <script src="../vendors/fontawesome/all.min.js"></script>
+    <script src="../vendors/lodash/lodash.min.js"></script>
+    <script src="../vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../vendors/gsap/gsap.js"></script>
+    <script src="../vendors/gsap/customEase.js"></script>
+    <script src="../assets/js/theme.js"></script>
+  </body>
+</html>
